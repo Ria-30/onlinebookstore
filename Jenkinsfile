@@ -27,9 +27,9 @@ pipeline {
                 // Add deployment steps here (e.g., deploy war file to a server)
                 echo "deploy stage"
            deploy adapters: [tomcat9 (
-                   credentialsId: 'deployer',
+                   credentialsId: 'tomcat_deployer',
                    path: '',
-                   url: 'http://52.170.151.187:8088/'
+                   url: 'http://40.80.149.223/:8088/'
                )],
                contextPath: 'Demo',
                onFailure: 'false',
